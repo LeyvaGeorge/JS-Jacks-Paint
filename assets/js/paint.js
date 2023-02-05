@@ -17,14 +17,13 @@ function configureListeners() {
 
 function addOpacity(event) {
     // add appropriate CSS class
+    event.target.style.opacity = .5;
     getProductInfo(event.target.id);     
 }
 
 function removeOpacity(event) {
      //remove appropriate CSS class
-     if(this.classList.contains('dim')){
-        this.classList.remove('dim');
-     }
+     event.target.style.opacity = 1;
 
     let element = document.getElementById('color-price');
         element.textContent = '';
